@@ -1,26 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+figure{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+
+
 body{
-    background-color: white;
+    background-image: url(/pictures/background.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
 }
+
+/* Pagina titel*/
 h1{
     font-size: 36px;
     text-align: center;
-    background-color: rgb(246, 236, 215);
+    background-color: rgb(249, 223, 203);
     padding: 2.5%;
     margin-top: auto;
+    text-transform: uppercase;
+    font-family:"Inria Serif", sans-serif; 
+    margin-bottom: 0;
+}
+
+h2{
+    font-size: 24px;
+    text-align: center;
+    padding: 2.5%;
+    margin-top: auto;
+    font-family:"Inria Serif", sans-serif; 
+}
+h3 {
+        font-size: 24px;
+}
+h3, h4{
+    text-align: center;
+    font-family:"Inria Serif", sans-serif; 
+}
+
+h4{
+    font-size: 20px;
+
 }
 
 p{
-    font-size:16px;
+    font-size: 1em; /* change to em*/
+    text-align: center;
+    font-family:"Inria Serif", sans-serif;
+    text-indent: 10px; 
+    word-spacing: 5px;
+    padding: 20px;
 }
-
+p.important{
+    color: red;
+}
+p.left{
+    font-size: 1em; /* change to em*/
+    text-align: left;
+    font-family:"Inria Serif", sans-serif;
+    text-indent: 10px; 
+    word-spacing: 5px;
+    padding: 20px;
+}
+p.rounded{
+    background-color: rgb(255, 172, 95);
+    border-radius: 50%;
+    font-size: 20px; /* change to em*/
+    text-align: center;
+    font-family:"Inria Serif", sans-serif;
+    text-indent: 10px; 
+    word-spacing: 5px;
+    margin-left:15% ;
+    width: 70%;
+    padding: 30px;
+}
+p.Taside{
+    font-size: 1em; /* change to em*/
+    text-align: left;
+    font-family:"Inria Serif", sans-serif;
+    text-indent: 2px; 
+    word-spacing: 5px;
+    margin: 0;
+    padding: 0;
+}
+/* Pagina titel met id  emphasis*/
 h1.emphasis {
     color: rgb(72, 57, 37);
+    font-family:"Inria Serif", sans-serif;
 }
+
+
+/* text met id text, main text */
 p.text{
     padding: 100px;
     float: left;
+    text-indent: 10px; 
+    word-spacing: 5px;
+    font-family:"Inria Serif", sans-serif;
+}
+p.aside{
+    text-align: left;
+    line-height: 1;
+    font-family:"Inria Serif", sans-serif;
 }
 
 .italic{
@@ -30,6 +126,7 @@ p.text{
 #main-nav{
     font-size: 20px;
 }
+/* Aside poisitie*/
 aside{
   width: 30%;
   padding-left: 15px;
@@ -38,43 +135,138 @@ aside{
   margin-right: 150px;
   float: right;
   font-style: italic;
-  background-color: rgb(241, 232, 220);
+  background-color: rgb(249, 223, 203);
   border-style: dotted;
   border-color: rgb(219, 194, 163);
+  border-width: 3px;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  
+}
+.logo{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100px;
+    height: 100px;
+    left: 85%;
 }
 img{
-    width: 40% ;
+   
+    width: 20% ;
+    display: block;
+    margin: 0 auto;
     border-style: groove;
 }
 figcaption{
-    text-align: left;
-    margin-left: 15%;
+    text-align: right;
+    display: block;
+    margin: 0 auto;
+    margin-left: 40%;
+    font-family:"Inria Serif", sans-serif;
 }
-ul{
+/* zorgen dat de faq in het midden van de pagina is*/
+details{
+    position: relative;
+    left: 35%;
+}
+
+summary{
+    display: flex;
+    background-color: rgb(249, 223, 203);
+    text-align: center;
+    width: 30%;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    border: 2px solid black;
+}
+.faq{
+    display: flex;
+    background-color: rgb(254, 225, 169);
+    width: 30%;
+    text-align: left;
+    height: 20%;
+    margin: 0 0;
+    border: 2px solid black;
+}
+ul li.list a.active{
+    background-color: rgb(255, 255, 255);
+}
+ul li.list{
+    font-family:"Inria Serif", sans-serif;
+}
+ul.nav{
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(250, 241, 229);
+    background-color: rgb(249, 223, 203);
 }
-ul li{
+ul > li{
     float: left;
+}
+ul li.foo a{
+    display:block;
+    font-size: 20px;
+    text-align: center;
+    padding: 14px 20px;
+    color: rgb(72, 57, 37);
+    text-decoration: none; 
 }
 ul li a{
     display:block;
     font-size: 20px;
     text-align: center;
-    padding: 14px 95px;
+    padding: 14px 20px;
     color: rgb(72, 57, 37);
     text-decoration: none; 
+    border: 2px solid black;
 }
+
 ul li a:hover{
-    background-color: rgb(212, 191, 159);
+    background-color: rgb(219, 182, 153);
+}
+ul li a.active{
+    background-color: rgb(219, 182, 153);
+}
+ul li.list a:hover{
+    background-color: rgb(255, 255, 255);
+}
+ul li.foo a:hover{
+    background-color: rgb(254, 225, 169);
+}
+ul li.foo a.active{
+    background-color: rgb(254, 225, 169);
+}
+ol li{
+    font-family:"Inria Serif", sans-serif;
+}
+form{
+    position: relative;
+    left: 40%;
+    margin-bottom: 10%;
+    word-spacing: 5px;
+    font-family:"Inria Serif", sans-serif;
+}
+.navf{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgb(254, 225, 169);
 }
 footer{
     margin-top: auto ;
-    background-color: rgb(246, 236, 215);
-    text-align: center;
+    background-color: rgb(249, 223, 203);
+
     padding: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
+
+@media screen and (max-width: 768px) {}
